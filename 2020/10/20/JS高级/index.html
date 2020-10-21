@@ -16,7 +16,7 @@
 <meta property="og:description" content="JS高级">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-20T11:51:41.000Z">
-<meta property="article:modified_time" content="2020-10-20T14:22:54.378Z">
+<meta property="article:modified_time" content="2020-10-21T05:44:18.314Z">
 <meta property="article:author" content="Codespi">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -245,50 +245,32 @@
 </ol>
 </li>
 </ol>
-<pre><code>    、、、、
+<pre><code> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function Person(name,age,sex)&#123;</span><br><span class="line">    this.name &#x3D; name;</span><br><span class="line">    this.age &#x3D; age;</span><br><span class="line">    this.sex &#x3D; sex;</span><br><span class="line">    this.play &#x3D; function()&#123;</span><br><span class="line">        console.log(&quot;天天打游戏&quot;)；</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-     function Person(name,age,sex){
-         this.name = name;
-         this.age = age;
-         this.sex = sex;
-         this.play = function(){
-             console.log(&quot;天天打游戏&quot;)；
-         };
-     }
-
-     、、、、
-
-     工厂模式：
+  工厂模式：
 
 
-     、、、、
-
-     function creatObject(name,age){
-         var obj = new Object();
-         obj.name = name;
-         obj.age = age;
-         obj.sayhi = function(){
-             console.log(&quot;你好&quot;);
-         };
-         return obj;
-     }
-
-     、、、、
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function creatObject(name,age)&#123;</span><br><span class="line">    var obj &#x3D; new Object();</span><br><span class="line">    obj.name &#x3D; name;</span><br><span class="line">    obj.age &#x3D; age;</span><br><span class="line">    obj.sayhi &#x3D; function()&#123;</span><br><span class="line">        console.log(&quot;你好&quot;);</span><br><span class="line">    &#125;;</span><br><span class="line">    return obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 4. 构造函数与实例对象关系
 
-    [console.dir(per);]//把这个对象结构显示出来 constructer在prototype中
-    总结：
+ `console.dir(per);`//把这个对象结构显示出来 constructer在prototype中
+ 总结：
 
-    * 实例对象通过构造函数创建
-    * 如何判断对象是不是该数据类型
+ * 实例对象通过构造函数创建
+ * 如何判断对象是不是该数据类型
 
 
-        * 通过判断构造器方式实例对象.构造器==构造函数名
-        * 对象 instanceof 构造函数名（一般用这种）</code></pre><ol start="4">
-<li>原型的引入、作用及写法（重点）</li>
-<li>原型的简单语法</li>
-<li>随机食物的产生</li>
+     * 通过判断构造器方式实例对象.构造器==构造函数名
+     * 对象 instanceof 构造函数名（一般用这种）</code></pre><ol start="4">
+<li><p>原型的引入、作用及写法（重点）</p>
+<p>作用：通过原型来添加方法实现数据共享，节省内存空间</p>
+<p>写法：例如 <code>ChangeStyle.prototype.init=function(){};</code></p>
+</li>
+<li><p>原型的简单语法</p>
+</li>
+<li><p>随机食物的产生</p>
+</li>
 </ol>
 
       
