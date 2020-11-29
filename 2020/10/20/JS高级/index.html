@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS高级 | codespi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS高级">
+  <meta name="description" content="初涉JS高级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS高级">
 <meta property="og:url" content="http://yoursite.com/2020/10/20/JS%E9%AB%98%E7%BA%A7/index.html">
 <meta property="og:site_name" content="codespi">
-<meta property="og:description" content="JS高级">
+<meta property="og:description" content="初涉JS高级">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/21/BPNYCj.png">
 <meta property="article:published_time" content="2020-10-20T11:51:41.000Z">
-<meta property="article:modified_time" content="2020-10-23T05:30:56.283Z">
+<meta property="article:modified_time" content="2020-10-24T01:34:48.980Z">
 <meta property="article:author" content="Codespi">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -198,10 +198,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JS高级"><a href="#JS高级" class="headerlink" title="JS高级"></a>JS高级</h1><a id="more"></a>
-<ol>
-<li><p>day1原型及作用</p>
-<ol>
+        <h1 id="初涉JS高级"><a href="#初涉JS高级" class="headerlink" title="初涉JS高级"></a>初涉JS高级</h1><a id="more"></a>
+<h2 id="day1原型及作用"><a href="#day1原型及作用" class="headerlink" title="day1原型及作用"></a>day1原型及作用</h2><ol>
 <li><p>复习之前未系统学过的JS基础知识</p>
 <ol>
 <li><p>JS数据结构</p>
@@ -228,8 +226,6 @@
 
 
 
-</li>
-</ol>
 </li>
 </ol>
 </li>
@@ -312,6 +308,12 @@
 </li>
 <li><p>随机食物的产生</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">    &lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .map&#123;</span><br><span class="line">            width: 800px;</span><br><span class="line">            height: 600px;</span><br><span class="line">            background-color: #ccc;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;map&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F;产生随机数对象的</span><br><span class="line">        (function (window) &#123;</span><br><span class="line">            function Random() &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            Random.prototype.getRandom&#x3D;function (min,max) &#123;</span><br><span class="line">                return Math.floor(Math.random()*(max-min)+min);</span><br><span class="line">            &#125;;</span><br><span class="line">            &#x2F;&#x2F;把局部对象暴露给window顶级对象，就成了全局的对象</span><br><span class="line">            window.Random&#x3D;new Random();</span><br><span class="line">        &#125;)(window);&#x2F;&#x2F;自调用构造函数的方式，分号一定要加上</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;console.log(Random.getRandom(0,5));</span><br><span class="line">        &#x2F;&#x2F;产生小方块对象</span><br><span class="line">        (function () &#123;</span><br><span class="line">            &#x2F;&#x2F;console.log(Random.getRandom(0,5));</span><br><span class="line">            &#x2F;&#x2F;选择器方式来获取元素对象</span><br><span class="line">            var map&#x3D;document.querySelector(&quot;.map&quot;);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F;食物的构造方法</span><br><span class="line">            function Food(width,height,color) &#123;</span><br><span class="line">                this.width&#x3D;width;&#x2F;&#x2F;默认的小方块的宽</span><br><span class="line">                this.height&#x3D;height;&#x2F;&#x2F;默认小方块的高</span><br><span class="line">                &#x2F;&#x2F;横坐标，纵坐标（随机）</span><br><span class="line">                this.x&#x3D;0;</span><br><span class="line">                this.y&#x3D;0;</span><br><span class="line">                this.color&#x3D;color;&#x2F;&#x2F;小方块背景</span><br><span class="line">                this.element&#x3D;document.createElement(&quot;div&quot;);&#x2F;&#x2F;创建小方块的元素</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F;初始化小方块的显示效果及位置</span><br><span class="line">            Food.prototype.init&#x3D;function (map) &#123;</span><br><span class="line">                &#x2F;&#x2F;设置小方块的样式</span><br><span class="line">                var div&#x3D;this.element; </span><br><span class="line">                div.style.position&#x3D;&quot;absolute&quot;;&#x2F;&#x2F;脱离文档流</span><br><span class="line">                div.style.width&#x3D;this.width+&quot;px&quot;;</span><br><span class="line">                div.style.height&#x3D;this.height+&quot;px&quot;;</span><br><span class="line">                div.style.backgroundColor&#x3D;this.color;</span><br><span class="line">                &#x2F;&#x2F;把小方块加到map地图中</span><br><span class="line">                map.appendChild(div);</span><br><span class="line">                this.render(map);&#x2F;&#x2F;原型方法相互调用</span><br><span class="line">            &#125;;</span><br><span class="line">            &#x2F;&#x2F;产生随机位置</span><br><span class="line">            Food.prototype.render&#x3D;function (map) &#123;</span><br><span class="line">                &#x2F;&#x2F;随机产生横坐标</span><br><span class="line">                var x&#x3D;Random.getRandom(0,map.offsetWidth&#x2F;this.width)*this.width;</span><br><span class="line">                var y&#x3D;Random.getRandom(0,map.offsetHeight&#x2F;this.height)*this.height;</span><br><span class="line">                this.x&#x3D;x;</span><br><span class="line">                this.y&#x3D;y;</span><br><span class="line">                var div&#x3D;this.element; </span><br><span class="line">                div.style.left&#x3D;this.x+&quot;px&quot;;</span><br><span class="line">                div.style.top&#x3D;this.y+&quot;px&quot;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            var fd&#x3D;new Food(20,20,&quot;green&quot;);</span><br><span class="line">            fd.init(map);</span><br><span class="line">        &#125;)(window);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
 </li>
 </ol>
 
@@ -432,6 +434,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/10/24/JS%E9%AB%98%E7%BA%A7-%E8%B4%AA%E5%90%83%E8%9B%87%E6%A1%88%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS高级-贪吃蛇案例
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/04/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">我的第一篇博客文章</div>
@@ -461,7 +472,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS高级"><span class="toc-number">1.</span> <span class="toc-text">JS高级</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初涉JS高级"><span class="toc-number">1.</span> <span class="toc-text">初涉JS高级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day1原型及作用"><span class="toc-number">1.1.</span> <span class="toc-text">day1原型及作用</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
