@@ -271,10 +271,101 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="2019春"><a href="#2019春" class="headerlink" title="2019春"></a>2019春</h1>
-        
-          <a class="article-more-a" href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%86%E5%B9%B4%E8%AF%95%E9%A2%98/#more">more >></a>
-        
+        <a id="more"></a>
+<p>历年试题收录在学习通资料中</p>
+<h1 id="2019春"><a href="#2019春" class="headerlink" title="2019春"></a>2019春</h1><h2 id="解答题"><a href="#解答题" class="headerlink" title="解答题"></a>解答题</h2><ol>
+<li>线程与进程的比较(P82-84):调度的基本单位、并发性、拥有资源、独立性、系统开销、支持多处理机系统</li>
+<li>计算各进程的周转时间及平均周转时间(p96起)  注：周转时间=到达时间-结束时间  SJF要看具体的到达时间 画图解答 注意看是抢夺式的还是非抢夺式的</li>
+<li>动态分区分配空间：最佳适配法与最坏适配法(p140)</li>
+<li>计算某逻辑地址所在的页号，页内偏移﹑所在的物理页面号和对应的物理地址。(p148) 给定一个逻辑地址空间中的地址为A 逻辑页面的大小为L(题目会给出)，则页号P和页内地址d为：P=INT[A|L],d=[A]MODL 根据页号P查页表加上一致的偏移量得物理地址。</li>
+<li>简逑系统（带通道)进行设备分配需要使用的数据结构及设备分配过程(p215起)——I/O系统</li>
+<li>数据结构：SDT(系统设备表) DCT(设备控制表) COCT(控制器控制表) CHCT(通道控制表)<br>进程提出设备请求，通过SDT查询是否有该设备，若有，进行安全性检测，通过后，通过SDT找到 DCT，查询设备状态，通过 DCT查询连接的COCT，通过COCT查询控制器状态，通过COCT查询连接的CHCT，通过CHCT查询通道的状态，若通路上的设备都空闲，则完成设备分配·(p217-218)</li>
+</ol>
+<h2 id="算法分析与设计题"><a href="#算法分析与设计题" class="headerlink" title="算法分析与设计题"></a>算法分析与设计题</h2><ol>
+<li><p>生产者-消费者问题(p65)P、V原语</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;输入端</span><br><span class="line">void producer()&#123;</span><br><span class="line">do&#123;</span><br><span class="line">    producer an item nextp;</span><br><span class="line">    ...</span><br><span class="line">    wait(empty);&#x2F;&#x2F;empty初始为n是判空标志，full初始为0为判满标志</span><br><span class="line">    wait(mutex);&#x2F;&#x2F;mutex初始为1为互斥标志 wait等价为P原语</span><br><span class="line">    buffer[in]&#x3D;nextp;</span><br><span class="line">    in&#x3D;(in+1)%n;</span><br><span class="line">    signal(mutex);</span><br><span class="line">    signal(full);等价V原语</span><br><span class="line">&#125;while(TRUE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;输出端</span><br><span class="line">void consumer()&#123;</span><br><span class="line">do&#123;</span><br><span class="line">    producer an item nextp;</span><br><span class="line">    ...</span><br><span class="line">    wait(full);&#x2F;&#x2F;empty初始为n是判空标志，full初始为0为判满标志</span><br><span class="line">    wait(mutex);&#x2F;&#x2F;mutex初始为1为互斥标志 wait等价为P原语</span><br><span class="line">    nextc&#x3D;buffer[out];</span><br><span class="line">    out&#x3D;(out+1)%n;&#x2F;&#x2F;in out皆初始为0</span><br><span class="line">    signal(mutex);</span><br><span class="line">    signal(empty);等价V原语</span><br><span class="line">&#125;while(TRUE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>进程共享资源问题之安全序列(p119):是否分配资源看是否有安全序列的存在</p>
+</li>
+<li><p>不同页面置换算法下的缺页次数F(页面置换(从外存中调入)的)与缺页率f(p174起): f=F/A (A=S+F)</p>
+<ol>
+<li>OPT算法(‘向后看’)：置换将来最晚或不会被访问的页面，置换性能最好，但无法实现;</li>
+<li>FIFO算法(先进先出):置换最早装入内存的页面，置换思想与实现方法简单，但可能淘汰重要页面，导致Belady异常现象;</li>
+<li>LRU算法(向前看):置换最近最久未被访问的页面，根据局部性原理是OPT的较好近似。</li>
+</ol>
+</li>
+</ol>
+<h1 id="2018秋-第一套"><a href="#2018秋-第一套" class="headerlink" title="2018秋(第一套)"></a>2018秋(第一套)</h1><h2 id="填空题"><a href="#填空题" class="headerlink" title="填空题"></a>填空题</h2><ol>
+<li>(并发性)和(共享)是多用户OS两个最基本的特征</li>
+<li>机遇微内核OS结构是建立在(模块化、层次法)结构的基础上的，采用了客户服务器模式和面向对象的程序设计技术。</li>
+<li>低级调度又称为(进程)调度，其调度对象是(进程)</li>
+<li>RR调度算法中，时间片的大小应取(略大于一次典型交互的时间)</li>
+<li>虚拟存储器是以(多次)性和(对换)性为基础的</li>
+<li>为实现设备分配，应为每一个设备设置一张(设备控制)表，用于记录设备的情况;在系统中需要设置一张(逻辑设备)表，用于将逻辑设备名映射为物理设备名。</li>
+<li>按照逻辑结构可以把文件分为(有结构)和(无结构)两类</li>
+<li>页表大多驻留在(内存)</li>
+<li>处理机的执行状态分为管态和(目态)</li>
+</ol>
+<h2 id="解答题-1"><a href="#解答题-1" class="headerlink" title="解答题"></a>解答题</h2><ol>
+<li><p>生产-消费问题同上 略</p>
+</li>
+<li><p>页式存储地址问题</p>
+<ol>
+<li>逻辑地址=页内地址+页号</li>
+<li>内存块数：物理空间(题干注意单位)/页大小(注意单位)</li>
+<li>页面数==页表项</li>
+<li>逻辑地址转物理地址</li>
+</ol>
+</li>
+<li><p>HRRN(高响应比)算法的进程平均周转时间和平均带权周转时间(p98)  注：周转时间=完成-到达  首个完成下几个的到达情况</p>
+<ol>
+<li>动态优先权=(等待时间+要求服务的时间)响应时间/要求服务时间</li>
+<li>带权周转时间是指作业的周转时间与系统为它提供服务的时间之比</li>
+</ol>
+</li>
+<li><p>用wait和 signal操作完成以下前趋图的描述，要求给出所有信号量的定义和初始化，给出对应的wait和signal操作。入度为wait()相当于P()反之出度为signal()相当于V()  初始信号量为零。</p>
+</li>
+<li><p>FIFO页面置换算法计算缺页次数(注：别忘了算上刚开始的)和缺页率</p>
+</li>
+<li><p>进程资源分配问题之银行家算法实施死锁避免策略(p120起) 四个数据结构：Available(可利用资源数组)、Max(最大需求矩阵)、Allocatiion(分配矩阵)、Need(需求矩阵)  Need[i,j]=Max[i,j]-Allocation[i,j] 注：安全序列不唯一</p>
+</li>
+</ol>
+<h1 id="2018春"><a href="#2018春" class="headerlink" title="2018春"></a>2018春</h1><h2 id="解答题-2"><a href="#解答题-2" class="headerlink" title="解答题"></a>解答题</h2><ol>
+<li><p>OS为什么要引入线程?对比线程的两种实现方案用户级线程和内核支撑线程的特点。(p81、p85-86)</p>
+<p>参考答案: OS引入线程是为了减少系统并发执行付出的时空开销，提高系统并发度。</p>
+<p>对比:1）用户级线程是由用户的基于线程库的运行时系统管理线程的，系统不知道用户级线程的存在;而内核支持线程由os来进行线程的管理;</p>
+<p>2)用户级线程调度可以是应用程序特定的，内核支持线程采用系统统一的调度算法;</p>
+<p>3)用户级线程可以运行在不支持线程的oS</p>
+<p>4)用户级线程切换不需要切换内核，减少了CPU 状态转换所花的时间开销</p>
+<p>5）内核支持线程可以实现一个进程内的多个线程的并行执行．而用户级线程一个进程只能分配一个CPU</p>
+<p>6)当线程执行系统调用时，内核支持线程只会阻塞该线程，它所屈进程的其他线程还可以执行，而用户级线程会阻塞整个进程·</p>
+</li>
+<li><p>分别考虑抢占(SRT 注：被抢的会暂时停下等轮到它)与非抢占方式(SPF)实现短进程优先调度算法，并针对下列进程序列，说明各自的调度过程与平均周转时间。</p>
+</li>
+<li><p>分页系统换算各地址</p>
+<ol>
+<li>逻辑地址转物理地址(见上略)</li>
+<li>访问两个地址的时间(题干会给出主存的一次存取时间t)：通过判断页面号是否在快表(p151)中 不在需要两次访问内存空间即2t，反之仅需一次t</li>
+</ol>
+</li>
+<li><p>进程内存分配问题(p140)</p>
+<ol>
+<li>首次适配法：依次往下找</li>
+<li>最佳适配法：永远选最合适的</li>
+<li>最坏适配法：永远选现阶段最大的</li>
+</ol>
+</li>
+<li><p>引入缓冲区的目的是什么?常用的专用缓冲区形式有哪些?</p>
+<p>参考答案:引入缓冲区的原因有很多，可归结为以下几点:(1)缓和CPU与I/O设备间速度不匹配的矛盾·(2)减少对CPU的中断频率，放宽对CPU中断响应时间的限制◎(3)解决数据粒度不匹配的问题·(4)提高CPU和lIrO设备之间的并行性。</p>
+<p>常用的专用缓冲区形式有:(1)单缓冲区．(2)双缓冲区，(3)环形缓冲区·</p>
+</li>
+</ol>
+<h2 id="算法分析与设计"><a href="#算法分析与设计" class="headerlink" title="算法分析与设计"></a>算法分析与设计</h2><ol>
+<li>进程资源分配问题之银行家算法实施死锁避免策略(p120起) 注：Request矩阵应小于Need矩阵再进行是否安全的判断</li>
+<li>桌上有一空盘，最多允许存放n个水果·爸爸负责放水果，儿子女儿负责取水果·爸爸一次可向盘中放一个苹果或放一个桔子，儿子专等吃盘中的桔子,女儿专等吃苹果。P、V操作实现爸爸﹑儿子、女儿三个并发进程的同步。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*解:设信号量fruit · apple · orange分别代表还允许放水果的数目﹑已放苹果数目和桔子数目,fruit&#x3D;n，apple&#x3D;0; orange&#x3D;0;mutex控制互斥使用权, mutex初值为1·*&#x2F;</span><br><span class="line">father</span><br><span class="line">&#123;</span><br><span class="line">   while(1)&#123;</span><br><span class="line">      p(fruit);</span><br><span class="line">      p(mutex);</span><br><span class="line">      放水果:</span><br><span class="line">      v(mutex);</span><br><span class="line">      if(放的苹果) v(apple);</span><br><span class="line">      else v(orange);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">son                     </span><br><span class="line">&#123;</span><br><span class="line">   while(1)&#123;</span><br><span class="line">      p(orange);</span><br><span class="line">      p(mutex);</span><br><span class="line">      取橘子:</span><br><span class="line">      v(mutex);</span><br><span class="line">      v(fruit);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">daughter                    </span><br><span class="line">&#123;</span><br><span class="line">   while(1)&#123;</span><br><span class="line">      p(apple);</span><br><span class="line">      p(mutex);</span><br><span class="line">      取苹果:</span><br><span class="line">      v(mutex);</span><br><span class="line">      v(fruit);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>页面置换算法(同上略)</li>
+</ol>
+
       
 
       
