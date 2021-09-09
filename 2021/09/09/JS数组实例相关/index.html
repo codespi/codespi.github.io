@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2021 | codespi</title>
+  <title>JS数组实例相关 | codespi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="codespi的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codespi">
-<meta property="og:url" content="http://yoursite.com/archives/2021/index.html">
+  <meta name="description" content="数组实例有关知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS数组实例相关">
+<meta property="og:url" content="http://yoursite.com/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/index.html">
 <meta property="og:site_name" content="codespi">
-<meta property="og:description" content="codespi的博客">
+<meta property="og:description" content="数组实例有关知识">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-09T00:26:46.597Z">
+<meta property="article:modified_time" content="2021-09-09T00:59:18.697Z">
 <meta property="article:author" content="Codespi">
 <meta name="twitter:card" content="summary">
   
@@ -171,75 +173,228 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-JS数组实例相关" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS数组实例相关
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/" class="archive-article-date">
+
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+  
+        
+        <a href="/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/" class="archive-article-date">
   	<time datetime="2021-09-09T00:26:46.597Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/">JS数组实例相关</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组实例有关知识"><a href="#数组实例有关知识" class="headerlink" title="数组实例有关知识"></a>数组实例有关知识</h1><a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
 
+
+
+
+
+
+<h2 id="一些常见方法-数组和字符串大多实例方法类似"><a href="#一些常见方法-数组和字符串大多实例方法类似" class="headerlink" title="一些常见方法(数组和字符串大多实例方法类似 )"></a>一些常见方法(数组和字符串大多实例方法类似 )</h2><h3 id="1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><a href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素" class="headerlink" title="1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素"></a>1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line">fruits.splice(1,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);&#x2F;&#x2F;Banana,Lemon,Kiwi,Orange,Apple,Mango 在下标为一的位置前面插入元素且插入后元素长度不变即‘-’0</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-在数组中删除元素-shift-和pop-该方法不创建新数组，而是直接修改原有的-arrayObject。"><a href="#2-在数组中删除元素-shift-和pop-该方法不创建新数组，而是直接修改原有的-arrayObject。" class="headerlink" title="2.在数组中删除元素 shift() 和pop()  该方法不创建新数组，而是直接修改原有的 arrayObject。"></a>2.在数组中删除元素 shift() 和pop()  该方法不创建新数组，而是直接修改原有的 arrayObject。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line">        var delell &#x3D; fruits.shift();&#x2F;&#x2F;删除数组第一个元素并返回</span><br><span class="line"></span><br><span class="line">        var delell2 &#x3D; fruits.pop();&#x2F;&#x2F;要删除并返回数组的最后一个元素</span><br><span class="line"></span><br><span class="line">        console.log(delell);&#x2F;&#x2F;Banana</span><br><span class="line"></span><br><span class="line">        console.log(delell2);&#x2F;&#x2F;Mango</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-在数组开头添加新元素-拟头插法"><a href="#3-在数组开头添加新元素-拟头插法" class="headerlink" title="3.在数组开头添加新元素 拟头插法"></a>3.在数组开头添加新元素 拟头插法</h3><p> ···</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”]</p>
+<p> fruits.unshift(“Lemon”,”Pineapple”);//Lemon,Pineapple,Banana,Orange,Apple,Mango</p>
+<p>···</p>
+<h3 id="4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><a href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。" class="headerlink" title="4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。"></a>4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</h3><p>···</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];</p>
+<p> console.log(fruits.join());//Banana,Orange,Apple,Mango</p>
+<p>···</p>
+<h3 id="5-数组排序"><a href="#5-数组排序" class="headerlink" title="5.数组排序"></a>5.数组排序</h3><p>···</p>
+<p>//按字母升序(字典序)</p>
+<p>​        var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];</p>
+<p>​        fruits.sort();</p>
+<p>​        //按字母降序</p>
+<p>​        fruits.sort().reverse();</p>
+<p>​        //按数字顺序升序</p>
+<p>​        var points = [40, 100, 1, 5, 25, 10];</p>
+<p>​        points.sort(function (a, b) { return a - b });//a&gt;b return true 需要交换 a&lt;b return false 不需要处理直接向后迭代</p>
+<p>​        //按数字顺序降序</p>
+<p>​        points.sort(function (a, b) { return b - a }); *///b&gt;a return true 需要交换满足降序 反之亦然</p>
+<p>···</p>
+
+      
+
+      
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://codespi.github.io/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/12/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="archive-article-date">
-  	<time datetime="2021-04-12T11:11:01.885Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/12/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python数据分析与人工智能</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/12/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">python数据分析与人工智能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数组实例有关知识"><span class="toc-number">1.</span> <span class="toc-text">数组实例有关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些常见方法-数组和字符串大多实例方法类似"><span class="toc-number">1.1.</span> <span class="toc-text">一些常见方法(数组和字符串大多实例方法类似 )</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-在数组中删除元素-shift-和pop-该方法不创建新数组，而是直接修改原有的-arrayObject。"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.在数组中删除元素 shift() 和pop()  该方法不创建新数组，而是直接修改原有的 arrayObject。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-在数组开头添加新元素-拟头插法"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.在数组开头添加新元素 拟头插法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-数组排序"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.数组排序</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -274,8 +429,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
