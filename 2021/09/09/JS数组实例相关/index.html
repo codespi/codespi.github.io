@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS数组实例相关 | codespi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组实例有关知识">
+  <meta name="description" content="数组实例有关知识一些常见方法(数组和字符串大多实例方法类似 )">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS数组实例相关">
 <meta property="og:url" content="http://yoursite.com/2021/09/09/JS%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9B%B8%E5%85%B3/index.html">
 <meta property="og:site_name" content="codespi">
-<meta property="og:description" content="数组实例有关知识">
+<meta property="og:description" content="数组实例有关知识一些常见方法(数组和字符串大多实例方法类似 )">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-09T00:26:46.597Z">
-<meta property="article:modified_time" content="2021-09-09T00:59:18.697Z">
+<meta property="article:modified_time" content="2021-09-09T01:08:51.135Z">
 <meta property="article:author" content="Codespi">
 <meta name="twitter:card" content="summary">
   
@@ -203,15 +203,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="数组实例有关知识"><a href="#数组实例有关知识" class="headerlink" title="数组实例有关知识"></a>数组实例有关知识</h1><a id="more"></a>
+        <h1 id="数组实例有关知识"><a href="#数组实例有关知识" class="headerlink" title="数组实例有关知识"></a>数组实例有关知识</h1><h2 id="一些常见方法-数组和字符串大多实例方法类似"><a href="#一些常见方法-数组和字符串大多实例方法类似" class="headerlink" title="一些常见方法(数组和字符串大多实例方法类似 )"></a>一些常见方法(数组和字符串大多实例方法类似 )</h2><a id="more"></a>
 
-
-
-
-
-
-
-<h2 id="一些常见方法-数组和字符串大多实例方法类似"><a href="#一些常见方法-数组和字符串大多实例方法类似" class="headerlink" title="一些常见方法(数组和字符串大多实例方法类似 )"></a>一些常见方法(数组和字符串大多实例方法类似 )</h2><h3 id="1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><a href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素" class="headerlink" title="1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素"></a>1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line">fruits.splice(1,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);&#x2F;&#x2F;Banana,Lemon,Kiwi,Orange,Apple,Mango 在下标为一的位置前面插入元素且插入后元素长度不变即‘-’0</span><br></pre></td></tr></table></figure>
+<h3 id="1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><a href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素" class="headerlink" title="1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素"></a>1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line">fruits.splice(1,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);&#x2F;&#x2F;Banana,Lemon,Kiwi,Orange,Apple,Mango 在下标为一的位置前面插入元素且插入后元素长度不变即‘-’0</span><br></pre></td></tr></table></figure>
 
 
 
@@ -219,26 +213,37 @@
 
 
 
-<h3 id="3-在数组开头添加新元素-拟头插法"><a href="#3-在数组开头添加新元素-拟头插法" class="headerlink" title="3.在数组开头添加新元素 拟头插法"></a>3.在数组开头添加新元素 拟头插法</h3><p> ···</p>
-<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”]</p>
-<p> fruits.unshift(“Lemon”,”Pineapple”);//Lemon,Pineapple,Banana,Orange,Apple,Mango</p>
-<p>···</p>
-<h3 id="4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><a href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。" class="headerlink" title="4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。"></a>4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</h3><p>···</p>
-<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];</p>
-<p> console.log(fruits.join());//Banana,Orange,Apple,Mango</p>
-<p>···</p>
-<h3 id="5-数组排序"><a href="#5-数组排序" class="headerlink" title="5.数组排序"></a>5.数组排序</h3><p>···</p>
-<p>//按字母升序(字典序)</p>
-<p>​        var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];</p>
-<p>​        fruits.sort();</p>
-<p>​        //按字母降序</p>
-<p>​        fruits.sort().reverse();</p>
-<p>​        //按数字顺序升序</p>
-<p>​        var points = [40, 100, 1, 5, 25, 10];</p>
-<p>​        points.sort(function (a, b) { return a - b });//a&gt;b return true 需要交换 a&lt;b return false 不需要处理直接向后迭代</p>
-<p>​        //按数字顺序降序</p>
-<p>​        points.sort(function (a, b) { return b - a }); *///b&gt;a return true 需要交换满足降序 反之亦然</p>
-<p>···</p>
+<h3 id="3-在数组开头添加新元素-拟头插法"><a href="#3-在数组开头添加新元素-拟头插法" class="headerlink" title="3.在数组开头添加新元素 拟头插法"></a>3.在数组开头添加新元素 拟头插法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;]</span><br><span class="line"></span><br><span class="line"> fruits.unshift(&quot;Lemon&quot;,&quot;Pineapple&quot;);&#x2F;&#x2F;Lemon,Pineapple,Banana,Orange,Apple,Mango</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><a href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。" class="headerlink" title="4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。"></a>4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line"> console.log(fruits.join());&#x2F;&#x2F;Banana,Orange,Apple,Mango</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-数组排序"><a href="#5-数组排序" class="headerlink" title="5.数组排序"></a>5.数组排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;按字母升序(字典序)</span><br><span class="line"></span><br><span class="line">        var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line"></span><br><span class="line">        fruits.sort();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;按字母降序</span><br><span class="line"></span><br><span class="line">        fruits.sort().reverse();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;按数字顺序升序</span><br><span class="line"></span><br><span class="line">        var points &#x3D; [40, 100, 1, 5, 25, 10];</span><br><span class="line"></span><br><span class="line">        points.sort(function (a, b) &#123; return a - b &#125;);&#x2F;&#x2F;a&gt;b return true 需要交换 a&lt;b return false 不需要处理直接向后迭代</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;按数字顺序降序</span><br><span class="line"></span><br><span class="line">        points.sort(function (a, b) &#123; return b - a &#125;); *&#x2F;&#x2F;&#x2F;b&gt;a return true 需要交换满足降序 反之亦然</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-将一个数组中的元素顺序反转排序-reverse"><a href="#6-将一个数组中的元素顺序反转排序-reverse" class="headerlink" title="6.将一个数组中的元素顺序反转排序 reverse()"></a>6.将一个数组中的元素顺序反转排序 reverse()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line">fruits.reverse();</span><br><span class="line">console.log(fruits[0]);&#x2F;&#x2F;Mango</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-从一个数组中选择元素-slice-返回新的实例-参数超过长度自动循环-slice-和concat-这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝-使用JSON-stringify和JSON-parse实现深拷贝：JSON-stringify把对象转成字符串，再用JSON-parse把字符串转成新的对象-浅拷贝：直接赋值"><a href="#7-从一个数组中选择元素-slice-返回新的实例-参数超过长度自动循环-slice-和concat-这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝-使用JSON-stringify和JSON-parse实现深拷贝：JSON-stringify把对象转成字符串，再用JSON-parse把字符串转成新的对象-浅拷贝：直接赋值" class="headerlink" title="7.从一个数组中选择元素 slice() 返回新的实例 参数超过长度自动循环      slice()和concat()这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝  使用JSON.stringify和JSON.parse实现深拷贝：JSON.stringify把对象转成字符串，再用JSON.parse把字符串转成新的对象  浅拷贝：直接赋值"></a>7.从一个数组中选择元素 slice() 返回新的实例 参数超过长度自动循环      slice()和concat()这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝  使用JSON.stringify和JSON.parse实现深拷贝：JSON.stringify把对象转成字符串，再用JSON.parse把字符串转成新的对象  浅拷贝：直接赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line">        var citrus &#x3D; fruits.slice(1,3);&#x2F;&#x2F;截取下标[1,3)即1到2的元素 slice(1)则是截掉下标小于1的元素后剩下的的数组  slice(0)相当于拷贝 双参数slice(index,index) 返回空</span><br><span class="line">        &#x2F;&#x2F;forEach循环</span><br><span class="line">        citrus.forEach((val)&#x3D;&gt;&#123;</span><br><span class="line">            console.log(val);</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;for-in循环不推荐用for-in来循环一个数组，因为，不像对象，数组的index跟普通的对象属性不一样，是重要的数值序列指标。总之，for–in是用来循环带有字符串key的对象的方法</span><br><span class="line">        for(var index in citrus)&#123;</span><br><span class="line">            console.log(citrus[index]);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;es6 的一种弥补其他方法短板(forEach不能中断循环)的循环方法 for-of</span><br><span class="line">        for(var val of citrus) &#123;</span><br><span class="line">            console.log(val);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-some-方法用于检测数组中的元素是否满足指定条件（函数提供）。"><a href="#8-some-方法用于检测数组中的元素是否满足指定条件（函数提供）。" class="headerlink" title="8.some() 方法用于检测数组中的元素是否满足指定条件（函数提供）。"></a>8.some() 方法用于检测数组中的元素是否满足指定条件（函数提供）。</h3><p>some() 方法会依次执行数组的每个元素：</p>
+<p>​        如果有一个元素满足条件，则表达式返回true, 剩余的元素不会再执行检测。</p>
+<p>​        如果没有满足条件的元素，则返回false。</p>
+<p>​        注意： some() 不会对空数组进行检测。</p>
+<p>​        注意： some() 不会改变原始数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var ages &#x3D; [3, 10, 18, 20];</span><br><span class="line">        function checkAdult(age) &#123;</span><br><span class="line">            return age &gt;&#x3D; 18;</span><br><span class="line">        &#125;</span><br><span class="line">        function myFunction() &#123;</span><br><span class="line">            document.getElementById(&quot;demo&quot;).innerHTML &#x3D; ages.some(checkAdult);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="9-数组转数字"><a href="#9-数组转数字" class="headerlink" title="9.数组转数字"></a>9.数组转数字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一步把数字数组用tostring（）方法转换成字符串数组，在打印台打印后，我们发现有逗号间隔，这个时候我们就要想到去除逗号。</span><br><span class="line">        第二步，去除逗号，我们就会联想到用空字符串替换，这个时候有必要用到正则表达式。</span><br><span class="line">        第三步，把数字字符串转化成数字，只需要用到类型转换就可以了。</span><br><span class="line">        array.toString().replace(&#x2F;,&#x2F;g,&quot;&quot;);  js转成数字方法 Number()、parseInt()和 parseFloat() 第一个函数, 即转型函数 Number()可以用于任何数据类型,而另两个函数则专门用于把字符串转换成数值。但数字有范围限制</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -346,6 +351,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/09/12/%E9%9D%A2%E8%AF%95%E6%B7%B1%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          面试深入
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/04/12/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">python数据分析与人工智能</div>
@@ -375,7 +389,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数组实例有关知识"><span class="toc-number">1.</span> <span class="toc-text">数组实例有关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些常见方法-数组和字符串大多实例方法类似"><span class="toc-number">1.1.</span> <span class="toc-text">一些常见方法(数组和字符串大多实例方法类似 )</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-在数组中删除元素-shift-和pop-该方法不创建新数组，而是直接修改原有的-arrayObject。"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.在数组中删除元素 shift() 和pop()  该方法不创建新数组，而是直接修改原有的 arrayObject。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-在数组开头添加新元素-拟头插法"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.在数组开头添加新元素 拟头插法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-数组排序"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.数组排序</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数组实例有关知识"><span class="toc-number">1.</span> <span class="toc-text">数组实例有关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些常见方法-数组和字符串大多实例方法类似"><span class="toc-number">1.1.</span> <span class="toc-text">一些常见方法(数组和字符串大多实例方法类似 )</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在数组中添加元素-splice-三个参数是插入-两个参数是删除-例如，splice-0-2-会删除数组中的前两项。-i-1-表示删除当前下标元素-下标i开始删除一个之后自动补充-一个参数是截取当前坐标前的元素"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.在数组中添加元素 splice() 三个参数是插入  两个参数是删除(例如，splice(0,2)会删除数组中的前两项。(i, 1)表示删除当前下标元素:下标i开始删除一个之后自动补充) 一个参数是截取当前坐标前的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-在数组中删除元素-shift-和pop-该方法不创建新数组，而是直接修改原有的-arrayObject。"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.在数组中删除元素 shift() 和pop()  该方法不创建新数组，而是直接修改原有的 arrayObject。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-在数组开头添加新元素-拟头插法"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.在数组开头添加新元素 拟头插法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-join-用数组元素组成字符串-split-如果把空字符串-“”-用作-separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号-String-split-执行的操作与-Array-join-执行的操作是相反的。stringObject-split-separator-howmany-separator-必需。字符串或正则表达式，从该参数指定的地方分割-stringObject。howmany-可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在-separator-指定的边界处将字符串-stringObject-分割成子串创建的。返回的数组中的字串不包括-separator-自身。如果把空字符串-“”-用作-separator，那么-stringObject-中的每个字符之间都会被分割。"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.join()用数组元素组成字符串  split()如果把空字符串 (“”) 用作 separator，那么每个字符之间都会被分割和单引号分离元素效果相同都是双引号.String.split() 执行的操作与 Array.join 执行的操作是相反的。stringObject.split(separator,howmany)separator  必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-数组排序"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.数组排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-将一个数组中的元素顺序反转排序-reverse"><span class="toc-number">1.1.6.</span> <span class="toc-text">6.将一个数组中的元素顺序反转排序 reverse()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-从一个数组中选择元素-slice-返回新的实例-参数超过长度自动循环-slice-和concat-这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝-使用JSON-stringify和JSON-parse实现深拷贝：JSON-stringify把对象转成字符串，再用JSON-parse把字符串转成新的对象-浅拷贝：直接赋值"><span class="toc-number">1.1.7.</span> <span class="toc-text">7.从一个数组中选择元素 slice() 返回新的实例 参数超过长度自动循环      slice()和concat()这两个方法，仅适用于对不包含引用对象的一维数组的深拷贝  使用JSON.stringify和JSON.parse实现深拷贝：JSON.stringify把对象转成字符串，再用JSON.parse把字符串转成新的对象  浅拷贝：直接赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-some-方法用于检测数组中的元素是否满足指定条件（函数提供）。"><span class="toc-number">1.1.8.</span> <span class="toc-text">8.some() 方法用于检测数组中的元素是否满足指定条件（函数提供）。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-数组转数字"><span class="toc-number">1.1.9.</span> <span class="toc-text">9.数组转数字</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
