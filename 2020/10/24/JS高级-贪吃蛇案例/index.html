@@ -190,6 +190,7 @@
 
         <!--显示阅读次数-->
 
+
   <br/>
   <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
   <span class="icon-sort"></span>
@@ -204,6 +205,14 @@
 </a>
 
         
+
+        <!-- 添加代码 -->
+    <!-- 
+      <span class="archive-article-date">
+          阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
+   -->
+
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -384,6 +393,28 @@
   
 
 
+
+  <div id="gitalk-container"></div>
+  <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'codespi.github.io',
+  owner: 'codespi',
+  admin: ['codespi'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+
+
           </div>
         </div>
       </div>
@@ -399,6 +430,25 @@
     </div>
   </div>
 </footer>
+<!-- <footer id="footer">
+	<div class="outer">
+	  <div id="footer-info">
+		<div class="footer-left">
+		  &copy; 2021 Codespi
+		</div>
+		<div class="footer-right">
+			<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+		</div>
+	  </div>
+	  <div calss="count-span">
+		<span id="busuanzi_container_site_pv">
+			总访问量: <span id="busuanzi_value_site_pv"></span>
+	  </div>
+	</div>
+   </footer> -->
+   
+   
+   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!--页面点击小红心-->
 <script type="text/javascript" src="/love.js"></script>
 
