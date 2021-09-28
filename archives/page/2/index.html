@@ -6,21 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>http | codespi</title>
+  <title>Archives | codespi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http基础知识常见考点">
-<meta property="og:type" content="article">
-<meta property="og:title" content="http">
-<meta property="og:url" content="http://yoursite.com/2021/09/24/http/index.html">
+  <meta name="description" content="codespi的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="codespi">
+<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
 <meta property="og:site_name" content="codespi">
-<meta property="og:description" content="http基础知识常见考点">
+<meta property="og:description" content="codespi的博客">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://z3.ax1x.com/2021/09/25/4sEAnx.png">
-<meta property="article:published_time" content="2021-09-24T08:10:57.615Z">
-<meta property="article:modified_time" content="2021-09-25T07:53:26.561Z">
 <meta property="article:author" content="Codespi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://z3.ax1x.com/2021/09/25/4sEAnx.png">
   
     <link rel="alternative" href="/atom.xml" title="codespi" type="application/atom+xml">
   
@@ -179,358 +175,64 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-http" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      http
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/28/hello-world/" class="archive-article-date">
+  	<time datetime="2020-04-28T15:15:22.749Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+</a>
+
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/28/hello-world/">Welcome thee!</a>
     </h1>
   
 
-        <!--显示阅读次数-->
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+          
 
-  <br/>
-  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-  <span class="icon-sort"></span>
-  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-  </span>
-  </a>
-  
-        
-        <a href="/2021/09/24/http/" class="archive-article-date">
-  	<time datetime="2021-09-24T08:10:57.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-24</time>
-</a>
-
-        
-
-        <!-- 添加代码 -->
-    <!-- 
-      <span class="archive-article-date">
-          阅读量 <span id="busuanzi_value_page_pv"></span>
-      </span>
-   -->
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="http基础知识"><a href="#http基础知识" class="headerlink" title="http基础知识"></a>http基础知识</h1><h2 id="常见考点"><a href="#常见考点" class="headerlink" title="常见考点"></a>常见考点</h2><a id="more"></a>
-
-<h2 id="1-常见状态码及分类"><a href="#1-常见状态码及分类" class="headerlink" title="1.常见状态码及分类"></a>1.常见状态码及分类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1××：服务器收到请求</span><br><span class="line">2××：请求成功，如200</span><br><span class="line">3××：重定向，如302</span><br><span class="line">4××：客户端错误：如404</span><br><span class="line">5××：服务端错误：如500</span><br><span class="line"></span><br><span class="line">常见状态码：</span><br><span class="line">200 成功</span><br><span class="line">301 永久重定向(配合location,浏览器自动处理)</span><br><span class="line">302 临时重定向(配合location,浏览器自动处理)</span><br><span class="line">304 资源未被修改</span><br><span class="line">404 资源未找到</span><br><span class="line">403 没有权限</span><br><span class="line">500 服务器错误</span><br><span class="line">504 网关超时</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-http-methods"><a href="#2-http-methods" class="headerlink" title="2.http methods"></a>2.http methods</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.传统的methods</span><br><span class="line">	get 获取服务器的数据</span><br><span class="line">	post 向服务器提交数据</span><br><span class="line">	简单的网页，就这两个操作</span><br><span class="line">	</span><br><span class="line">2.现在的methods</span><br><span class="line">	get 获取数据</span><br><span class="line">	post 新建数据</span><br><span class="line">	patch&#x2F;put 更新数据</span><br><span class="line">	delete 删除数据</span><br><span class="line">	</span><br><span class="line">3.Restful API(一种较新的早已推广使用的API设计方法)</span><br><span class="line">	传统API设计：把每个url当做一个功能</span><br><span class="line">	Restful API设计：把每个url当作一个唯一的资源</span><br><span class="line">	如何设计一个资源</span><br><span class="line">		尽量不用url参数 e.g 传统：&#x2F;api&#x2F;list?pageIndex&#x3D;2 Restful API设计：&#x2F;api&#x2F;list&#x2F;2</span><br><span class="line">		用method表示操作类型 e.g 传统：post请求 &#x2F;api&#x2F;create-blog Restful API设计：&#x2F;api&#x2F;blog</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.http headers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">常见的Request Headers</span><br><span class="line">	Accept 浏览器可接受的数据格式</span><br><span class="line">	Accept-Encodeing 浏览器可接收的压缩算法，如gzip</span><br><span class="line">	Accept-Languange 浏览器可接收的语言，如zh-CN</span><br><span class="line">	Connection:Keep-alive 一次TCP连接重复使用</span><br><span class="line">	cookie 浏览器自带</span><br><span class="line">	Host 请求的域名</span><br><span class="line">	User-Agent(简称UA)浏览器信息或者客户端一些其他的信息</span><br><span class="line">	Content-type 发送数据的格式，如application&#x2F;json</span><br><span class="line">	</span><br><span class="line">常见的Response Headers</span><br><span class="line">	Content-type 返回数据的格式，如application&#x2F;json</span><br><span class="line">	Content-length返回数据的大小，多少字节</span><br><span class="line">	Content-Encoding 返回数据的压缩算法，如gzip</span><br><span class="line">	Set-Cookie 服务端修改cookie</span><br><span class="line">	</span><br><span class="line">自定义header(C&#x2F;S皆可)</span><br><span class="line"></span><br><span class="line">缓存相关的headers</span><br><span class="line">Cache-Control Expires</span><br><span class="line">Last-Modified If-Modified-Since</span><br><span class="line">Etag If-None-Match</span><br></pre></td></tr></table></figure>
-
-<p>4.http 缓存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1.缓存介绍 </span><br><span class="line">	优化网络请求的时间消耗、一般静态资源可以被缓存(js css img)(含hash后缀)</span><br><span class="line">	</span><br><span class="line">2.http缓存策略(强制缓存+协商缓存)</span><br><span class="line">	强制缓存：服务端控制Response Headers传过来的Cache-Control 在本地缓存(disk cache)中实现</span><br><span class="line">    	cache-control常见值：max-age（最大维持缓存时间）、no-cache（不用强制缓存）、no-store（所有缓存都不使用）、private（仅允许个人终端用户缓存）、public（允许中间路由网关缓存）</span><br><span class="line">    	</span><br><span class="line">	协商(对比)缓存:服务端缓存策略(服务器判断客户端资源，是否和服务端资源(资源标识)一样) 一致就返回304，否则返回200和最新的资源</span><br><span class="line">	资源标识</span><br><span class="line">	Last-Modified 资源的最后修改时间</span><br><span class="line">		原理：再次请求，Request Headers带着If-Modified-Since(&#x3D;&#x3D;&#x3D;Last-Modified) 经服务器判断返回304或返回新的资源以及Last-Modified</span><br><span class="line">		</span><br><span class="line">	Etag 资源的唯一标识 和Last-Modified原理一样 If-None-Match（&#x3D;&#x3D;&#x3D;Etag）  </span><br><span class="line">	两者共存会优先使用Etag,Last-Modified只能精确到秒级 且如果资源被重复生成，而内容不变，则Etag更精确。</span><br><span class="line">	</span><br><span class="line">3.刷新操作方式，对缓存的影响</span><br><span class="line">	1.正常刷新：地址栏输入url,跳转链接，前进后退等</span><br><span class="line">	2.手动刷新：F5,点击刷新按钮或右键菜单刷新</span><br><span class="line">	3.强制刷新：ctrl + F5</span><br><span class="line">	</span><br><span class="line">	1.正常操作：强制缓存有效(客户端实现)，协商缓存有效(服务器端)</span><br><span class="line">	2.手动刷新：强制缓存失效，协商缓存有效</span><br><span class="line">	3.强制刷新：都失效</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://imgtu.com/i/4sEAnx" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/25/4sEAnx.png" alt="4sEAnx.png"></a></p>
-
-      
-
-      
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/wechatpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://codespi.github.io/2021/09/24/http/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/09/26/%E8%AE%A1%E7%BD%91%E7%9B%B8%E5%85%B3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          计网相关
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/09/12/%E9%9D%A2%E8%AF%95%E6%B7%B1%E5%85%A5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面试深入</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#http基础知识"><span class="toc-number">1.</span> <span class="toc-text">http基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见考点"><span class="toc-number">1.1.</span> <span class="toc-text">常见考点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-常见状态码及分类"><span class="toc-number">1.2.</span> <span class="toc-text">1.常见状态码及分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-http-methods"><span class="toc-number">1.3.</span> <span class="toc-text">2.http methods</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  <!--  -->
-<!-- 
-  <div id="gitalk-container"></div>
-  <!-- <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
- -->
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
- -->
-<!--  -->
-
-
-  
-
-  
-    <!-- <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
- -->
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
     
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+    </nav>
   
-
-  <!-- 
-    <div id="gitalk-container"></div>
-    <!-- <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
- -->
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: 'codespi',
-  admin: ['codespi'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-   -->
-
-
-
 
 
           </div>
@@ -584,8 +286,8 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
