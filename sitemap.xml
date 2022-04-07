@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2022/04/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%B0%81%E8%A3%85/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/09/12/%E9%9D%A2%E8%AF%95%E6%B7%B1%E5%85%A5/</loc>
     
     <lastmod>2022-04-06</lastmod>
@@ -109,7 +116,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2022-04-06</lastmod>
+    <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -117,7 +124,7 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-04-06</lastmod>
+    <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
